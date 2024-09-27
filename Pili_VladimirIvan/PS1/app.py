@@ -2,12 +2,13 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    name = None
-    if request.method == "POST":
-        name = request.form.get("name")
-    return render_template("index.html", name=name)
+    if request.method == 'POST':
+        name = request.form.get('name')
+        if name:
+            return render_template('index.html', greeting=f'Hello, {name}!')
+    return render_template('index.html')
 
-if __name__ == "__main__":
+if __name__ == '_main_':
     app.run(debug=True)
