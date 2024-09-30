@@ -1,6 +1,4 @@
 <div style="background-color: white; padding: 20px;">
-
-<div style="background-color: white; padding: 20px;">
  
 <p align="center">
  <img height=200px src="./header.png" alt="Traffic Signal Timer">
