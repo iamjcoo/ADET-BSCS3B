@@ -1,3 +1,5 @@
+<div style="background-color: white; padding: 20px;">
+ 
 <p align="center">
  <img height=200px src="./image.png" alt="Traffic Signal Timer">
 </p>
@@ -111,3 +113,5 @@ We would like to extend our sincere thanks to our mentor Mrs. Nirmala Shinde Bal
 ------------------------------------------
 ### License
 This project is licensed under the Apache License 2.0 - see the [LICENSE](./LICENSE) file for details.
+
+</div>
