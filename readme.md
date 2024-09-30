@@ -1,8 +1,10 @@
+<div style="background-color: white; padding: 20px;">
+
 <p align="center">
- <img height=200px src="./image.png" alt="Traffic Signal Timer">
+ <img height=200px src="./header.png" alt="Traffic Signal Timer">
 </p>
 
-<h1 align="center">Application Development and Emerging Technologies</h1>
+<h2 align="center">CCCS 106 - Application Development and Emerging Technologies</h2>
 
 <div align="center">
 
@@ -16,98 +18,121 @@
 </div>
 
 -----------------------------------------
-### Inspiration
+### PS1
 
-* Traffic congestion is becoming one of the critical issues with the increasing population and automobiles in cities. Traffic jams not only cause extra delay and stress for the drivers but also increase fuel consumption and air pollution. 
-
-* According to the [TomTom Traffic Index](https://www.tomtom.com/en_gb/traffic-index/ranking/), 3 of the top 10 countries facing the most traffic congestion are in India viz. Mumbai, Bengaluru, and New Delhi.  People are compelled to spend hours stuck in traffic jams, wasting away their precious time commuting. Current traffic light controllers use a fixed timer and do not adapt according to the real-time traffic on the road.
-
-* In an attempt to reduce traffic congestion, we developed an improved traffic management system in the form of a Computer Vision-based traffic light controller that can autonomously adapt to the traffic situation at the traffic signal. The proposed system sets the green signal time adaptively according to the traffic density at the signal and ensures that the direction with more traffic is allotted a green signal for a longer duration of time as compared to the direction with lesser traffic. 
-
+* PS1 is a simple Flask application that ask a user to input his/her name. The flask program contains this route `/` which renders a simple HTML form named `PS1.html` that asks for the user's name. When the user submits the form, the application redirects to the `/greet` route which greets the user with a message "Hello World! {name}, welcome to CCCS 106 - Applications Development and Emerging Technology".
 ------------------------------------------
-### Implementation Details
+### PS1 Demo
 
-This project can be broken down into 3 modules:
-
-1. `Vehicle Detection Module` - This module is responsible for detecting the number of vehicles in the image received as input from the camera. More specifically, it will provide as output the number of vehicles of each vehicle class such as car, bike, bus, truck, and rickshaw.
-
-2. `Signal Switching Algorithm` - This algorithm updates the red, green, and yellow times of all signals. These timers are set bases on the count of vehicles of each class received from the vehicle detection module and several other factors such as the number of lanes, average speed of each class of vehicle, etc. 
-
-3. `Simulation Module` - A simulation is developed from scratch using [Pygame](https://www.pygame.org/news) library to simulate traffic signals and vehicles moving across a traffic intersection.
-
-Read more about object detection model used, working of the algorithm, and development of simulation [here](./Adaptive_Traffic_Signal_Timer_Implementation_Details.pdf).
-
-------------------------------------------
-### Demo
-
-* `Vehicle Detection`
+* `Enter your name`
 
 <p align="center">
- <img height=400px src="./vehicle-detection.png" alt="Vehicle Detection">
+ <img height=400px src="./PS1.gif" alt="outputPS1">
 </p>
 
 <br> 
+------------------------------------------
 
-* `Signal Switching Algorithm and Simulation`
+### PS2
+
+* PS2 is a Flask registration form that asks the user to input his/her first name, middle name, last name, birth date, email, and address. The flask program contains this route `/` which renders the html form `PS2.html` where the user inputs its information. The form also contains a submit button which when clicked, the application redirects to the `/submit` route which displays the user's information in a `JSON` file with a message "Data saved successfully to a JSON file".
+------------------------------------------
+### PS2 Demo
+
+* `Enter first name`
+* `Enter middle name`
+* `Enter last name`
+* `Enter birth date`
+* `Enter email`
+* `Enter address`
 
 <p align="center">
-    <img src="./Demo.gif">
+ <img height=400px src="./PS2.gif" alt="outputPS1">
 </p>
 
+<br> 
 ------------------------------------------
+
+### PS3
+
+* PS3 is an improved Flask registration form of the previous Problem Set 2. Just like the previous version. It still ask for the user's personal information. The only difference is where the data is stored. In this version, the data is stored in a `MySql` database named `adet` and in the table named `adet_avila`. The flask program contains this route `/` which renders the html form `home.html` which act as the home page of the application. It has an `input information` button that when clicked, the application redirects to the `/form` route which renders the html form `PS3.html` where the user inputs its information. The form also contains a submit button which when clicked, the application redirects to the `/submit` route which can redirect to `home.html` with a message "Information successfully recorded!". However, if the email is already taken, the application will redirect back to the `/form` with a message "Email is already taken. Use other email instead.".
+
+The Problem Set 3 registration form with MySql database imported the following libraries and modules:
+* `flask`
+* `flask-mysqldb - MySQL`
+* `MySQLdb`
+* `yaml` - I used this to store the database configuration and hide my user name and password. This is to avoid        exposing my credentials in the code. If you want to use this, you can create a `db.yaml` file and store your database's host, username, password, and the database to use. The format should be like this:
+
+```yaml
+    mysql:
+            mysql_host: 'localhost`
+            mysql_user: 'yourusername'
+            mysql_password: 'yourpassword'
+            mysql_db: 'adet'
+```
+
+------------------------------------------
+### PS3 Demo
+
+* `Enter first name`
+* `Enter middle name`
+* `Enter last name`
+* `Enter birth date`
+* `Enter email`
+* `Enter address`
+
+* Since the email has a `UNIQUE` constraint in the database, the application will not allow the user to input the same email twice. Therefore, the application will redirect back to the form with a message "Email is already taken. Use other email instead."
+
+<p align="center">
+ <img height=400px src="./PS3.gif" alt="outputPS1">
+</p>
+
+<br> 
+------------------------------------------
+
+### Implementation Details
+
+This repository as of now contains the implementation of flask applications for PS1, PS2, and PS3. In the latest discussion of our Instructor, we are introduced to the implementation of MySQL database in our flask applications. In the latest Problem Set 3, we are tasked to create a registration form that stores the user's information in a MySQL database.
+
+1. `Flask` - Flask is mostly known as a web "micro-framework" developed in python. This is small enough to be easy to learn and create applications out of it. What I find out in Flask is that it's a very beginner-friendly framework that is easy to understand and use. - [Educative-Intro-to-Flask](https://www.educative.io/courses/flask-develop-web-applications-in-python/what-is-flask) , [Flask-Web-Dev](https://coddyschool.com/upload/Flask_Web_Development_Developing.pdf)
+
+2. `MySQL` - MySQL is an open-source relational database management system. It is a database management system that is based on SQL (Structured Query Language). It is used for managing databases, web applications, and websites. - [MySQL-Tutorial](https://www.mysqltutorial.org/)
+------------------------------------------
+
 ### Prerequisites
 
-1. [Python 3.7](https://www.python.org/downloads/release/python-370/)
-2. [Microsoft Visual C++ build tools](http://go.microsoft.com/fwlink/?LinkId=691126&fixForIE=.exe.) (For Windows only)
-
+1. [Python 3.12.6](https://www.python.org/downloads/release/python-3126/)
+2. [XAMPP 8.0.30](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.0.30/xampp-windows-x64-8.0.30-0-VS16-installer.exe) (For Windows)
+3. [XAMPP 8.0.28](https://sourceforge.net/projects/xampp/files/XAMPP%20Mac%20OS%20X/8.0.28/xampp-osx-8.0.28-0-installer.dmg) (For OS X)
 ------------------------------------------
 ### Installation
 
 * Step I: Clone the Repository
 ```sh
-      $ git clone https://github.com/mihir-m-gandhi/Adaptive-Traffic-Signal-Timer
+      $ git clone https://github.com/Devcavi19/ADET-BSCS3B
 ```
 
-* Step II: Download the weights file from [here](https://drive.google.com/file/d/1flTehMwmGg-PMEeQCsDS2VWRLGzV6Wdo/view?usp=sharing) and place it in the Adaptive-Traffic-Signal-Timer/Code/YOLO/darkflow/bin directory
-
-* Step III: Install the required packages
+* Step II: Install the required packages
 ```sh
-      # On the terminal, move into Adaptive-Traffic-Signal-Timer/Code/YOLO/darkflow directory
-      $ cd Adaptive-Traffic-Signal-Timer/Code/YOLO/darkflow
+      # On the terminal, move into the ADET-BSCS3B directory or just choose the directory where the repository is cloned
+      $ cd ADET-BSCS3B
       $ pip install -r requirements.txt
-      $ python setup.py build_ext --inplace
 ```
 
-* Step IV: Run the code
+* Step III: Run the code
 ```sh
-      # To run vehicle detection
-      $ python vehicle_detection.py
-      
-      # To run simulation
-      $ python simulation.py
+      # To run run the flask application
+      $ python PS1.py
+
+      # or run the other flask applications
+      # $ python PS2.py
+      # $ python PS3.py
 ```
 
 ------------------------------------------
-### Dissemination
+### Contributor
 
-* This project was showcased at a national level project competition organized by [Government Polytechnic Mumbai](http://www.gpmumbai.ac.in/). View our presentation video [here](https://youtu.be/OssY5pzOyo0).
-
-* Our paper based on this project was presented at 5th IEEE International Conference on Recent Advances and Innovations in Engineering - [ICRAIE 2020](http://www.icraie.poornima.org/) and published in IEEE Xplore. View the paper [here](https://ieeexplore.ieee.org/document/9358334).
+Herald Carl Avila - [Devcavi19](https://github.com/Devcavi19)
 
 ------------------------------------------
-### Contributors
-
-Mihir Gandhi - [mihir-m-gandhi](https://github.com/mihir-m-gandhi)
-
-Devansh Solanki - [devanshslnk](https://github.com/devanshslnk/)
-
-Rutwij Daptardar - [RDmaverick](https://github.com/RDmaverick)
-
-------------------------------------------
-### Acknowledgement
-
-We would like to extend our sincere thanks to our mentor Mrs. Nirmala Shinde Baloorkar for her kind help and valuable advice. Her support and constant supervision were imperative for the successful completion of this project. We would also like to express our special gratitude and thanks to Mrs. Kavita Kelkar, the subject-matter expert for this project, for her valuable inputs and guidance.   
-
-------------------------------------------
-### License
-This project is licensed under the Apache License 2.0 - see the [LICENSE](./LICENSE) file for details.
+</div>

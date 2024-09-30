@@ -31,7 +31,7 @@ def submit():
         ])
         
         # Return the ordered data along with the success message
-        return jsonify({"message": "Data saved successfully!", "data": ordered_data})
+        return jsonify({"message": "Data saved successfully to a JSON file", "data": ordered_data})
     except Exception as e:
         return jsonify({"message": "An error occurred while saving data.", "error": str(e)}), 500
 
