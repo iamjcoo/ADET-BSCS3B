@@ -18,6 +18,7 @@
 </div>
 
 -----------------------------------------
+
 ### PS1
 
 * PS1 is a simple Flask application that ask a user to input his/her name. The flask program contains this route `/` which renders a simple HTML form named `PS1.html` that asks for the user's name. When the user submits the form, the application redirects to the `/greet` route which greets the user with a message "Hello World! {name}, welcome to CCCS 106 - Applications Development and Emerging Technology".
@@ -31,6 +32,7 @@
 </p>
 
 <br> 
+
 ------------------------------------------
 
 ### PS2
@@ -51,6 +53,7 @@
 </p>
 
 <br> 
+
 ------------------------------------------
 
 ### PS3
@@ -87,7 +90,8 @@ The Problem Set 3 registration form with MySql database imported the following l
  <img height=400px src="./PS3.gif" alt="outputPS1">
 </p>
 
-<br> 
+<br>
+
 ------------------------------------------
 
 ### Implementation Details
