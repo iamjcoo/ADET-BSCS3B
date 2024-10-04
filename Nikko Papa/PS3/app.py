@@ -1,7 +1,16 @@
 import json
 from flask import Flask, render_template, request, redirect, url_for
+import mysql.connector
 
 app = Flask(__name__)
+
+db = mysql.connector.connect(
+    host='localhost',
+    user='root',
+    password='admin123',
+    database='adet'
+)
+cursor = db.cursor()
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -14,9 +23,11 @@ def home():
             'email': request.form.get('email'),
             'address': request.form.get('address'),
         }
-        with open('registrations.json', 'a') as f:
-            json.dump(data, f)
-            f.write('\n') 
+        cursor.execute(
+            "INSERT INTO adet_user (first_name, middle_name, last_name, contact_number, email, address) VALUES (%s, %s, %s, %s, %s, %s)",
+            (data['first_name'], data['middle_name'], data['last_name'], data['contact_number'], data['email'], data['address'])
+        )
+        db.commit()
         return redirect(url_for('home'))
     return render_template('index.html')
 
