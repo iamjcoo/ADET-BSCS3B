@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Path to JSON file to store the data
-JSON_FILE_PATH = "data.json"
+JSON_FILE_PATH = "C:\\Users\\user\\Documents\\adet\\Calingacion_Almira_BSCS3B\\PS2\\data.json"
 
 # Function to save data to data.json
 def write_data_to_json(new_entry):
