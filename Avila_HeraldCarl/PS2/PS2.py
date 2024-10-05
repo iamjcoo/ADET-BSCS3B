@@ -22,12 +22,12 @@ def submit():
         
         # Create an OrderedDict to maintain the desired order
         ordered_data = OrderedDict([
-            ("fname", user_input.get("fname")),
-            ("mname", user_input.get("mname")),
-            ("lname", user_input.get("lname")),
-            ("birth_date", user_input.get("birth_date")),
-            ("email", user_input.get("email")),
-            ("address", user_input.get("address"))
+            ("1. First Name", user_input.get("fname")),
+            ("2. Middle Name", user_input.get("mname")),
+            ("3. Last Name", user_input.get("lname")),
+            ("4. Contact Number", user_input.get("contact_num")),
+            ("5. Email", user_input.get("email")),
+            ("6. Address", user_input.get("address"))
         ])
         
         # Return the ordered data along with the success message
