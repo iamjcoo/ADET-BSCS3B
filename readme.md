@@ -37,14 +37,14 @@
 
 ### PS2
 
-* PS2 is a Flask registration form that asks the user to input his/her first name, middle name, last name, birth date, email, and address. The flask program contains this route `/` which renders the html form `PS2.html` where the user inputs its information. The form also contains a submit button which when clicked, the application redirects to the `/submit` route which displays the user's information in a `JSON` file with a message "Data saved successfully to a JSON file".
+* PS2 is a Flask registration form that asks the user to input his/her first name, middle name, last name, contact number, email, and address. The flask program contains this route `/` which renders the html form `PS2.html` where the user inputs its information. The form also contains a submit button which when clicked, the application redirects to the `/submit` route which displays the user's information in a `JSON` file with a message "Data saved successfully to a JSON file".
 ------------------------------------------
 ### PS2 Demo
 
 * `Enter first name`
 * `Enter middle name`
 * `Enter last name`
-* `Enter birth date`
+* `Enter contact number`
 * `Enter email`
 * `Enter address`
 
@@ -80,7 +80,7 @@ The Problem Set 3 registration form with MySql database imported the following l
 * `Enter first name`
 * `Enter middle name`
 * `Enter last name`
-* `Enter birth date`
+* `Enter contact number`
 * `Enter email`
 * `Enter address`
 
