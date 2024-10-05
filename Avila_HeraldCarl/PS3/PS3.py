@@ -29,13 +29,13 @@ def submit_post():
         fname = create['fname']
         mname = create['mname']
         lname = create['lname']
-        bdate = create['bdate']
+        contact_num = create['contact_num']
         email = create['email']
         address = create['address']
         
         cur = mysql.connection.cursor()
         try:
-            cur.execute("INSERT INTO adet_avila(fname, mname, lname, bdate, email, address) VALUES(%s, %s, %s, %s, %s, %s)", (fname, mname, lname, bdate, email, address))
+            cur.execute("INSERT INTO adet_avila(fname, mname, lname, contact_num, email, address) VALUES(%s, %s, %s, %s, %s, %s)", (fname, mname, lname, contact_num, email, address))
             mysql.connection.commit()
             return render_template('home.html', message="Information successfully recorded!")
         except MySQLdb.IntegrityError as e:
