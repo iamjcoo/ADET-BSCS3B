@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('galaxy.png') no-repeat center center/cover; /* Background wallpaper */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-box {
+    width: 450px; 
+    padding: 20px;
+    background: rgba(30, 30, 45, 0.9); /* Darker background with slight transparency */
+    border-radius: 20px;
+    backdrop-filter: blur(15px); /* Blurring the background for depth */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for more contrast */
+    transition: transform 0.2s;
+    text-align: center; /* Centering the text inside the form */
+}
+
+.form-box:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #e0c0ff; /* Light lavender for the heading */
+}
+
+.inputbox {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.inputbox input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #8a7fcb; /* Light purple border */
+    border-radius: 5px; /* Slightly rounded */
+    font-size: 16px;
+    color: #ffffff; /* White text for better readability */
+    background-color: rgba(60, 60, 80, 0.7); /* Semi-transparent dark background for inputs */
+    transition: border-color 0.2s;
+}
+
+.inputbox input:focus {
+    border-color: #4747ff; /* Coral color on focus */
+    outline: none;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #bfbfbf; /* Light gray */
+    transition: 0.2s;
+}
+
+.inputbox input:focus + label,
+.inputbox input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 9px;
+    color: #4750ff; /* Coral color when focused */
+}
+
+button {
+    width: 98%;
+    padding: 8px;
+    background-color: #9b59b6; /* Medium purple for the button */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #8e44ad; /* Darker purple on hover */
+}
+
+/* Success message styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px; /* Margin below the message */
+}
+
+ul li {
+    color: #66ff66; /* Light green for success messages */
+    font-weight: bold; /* Make the success message stand out */
+}
+
+/* Responsive adjustments */
+@media (max-width: 390px) {
+    .form-box {
+        width: 90%;
+    }
+}
