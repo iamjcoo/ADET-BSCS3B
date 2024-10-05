@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc); 
+            background-attachment: fixed; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #3943ff; 
+        }
+        a {
+            text-decoration: none;
+            color: #3943ff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <meta http-equiv="refresh" content="5;url={{ url_for('registration_form') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful!</h1>
+        <p>Thank you for registering. Your information has been saved successfully.</p>
+        <p>You will be redirected to the registration form in 5 seconds.</p>
+        <a href="{{ url_for('registration_form') }}">Go back to Registration Form immediately</a>
+    </div>
+</body>
+</html>
