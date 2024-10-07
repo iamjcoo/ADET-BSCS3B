@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <title>Login Web</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form method="POST" action="/">
+                    <h2>Registration Form</h2>
+
+                    <!-- Display success message -->
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                      {% if messages %}
+                        <ul>
+                        {% for category, message in messages %}
+                          <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
+                    
+                    <div class="inputbox">
+                        <input type="text" name="first-name" required>
+                        <label for="first-name">First Name</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <input type="text" name="middle-initial" required>
+                        <label for="middle-initial">Middle Initial</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <input type="text" name="last-name" required>
+                        <label for="last-name">Last Name</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <input type="text" name="address" required>
+                        <label for="address">Address</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <input type="email" name="email-address" required>
+                        <label for="email-address">Email Address</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <input type="text" name="contact-number" required>
+                        <label for="contact-number">Contact Number</label>
+                    </div>
+                    
+                    <button type="submit">Submit</button> <!-- Register/Submit button -->
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

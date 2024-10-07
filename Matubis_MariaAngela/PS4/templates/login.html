@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form method="POST" action="/login">
+                    <h2>Login Form</h2>
+
+                    <!-- Display success or error messages -->
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                      {% if messages %}
+                        <ul>
+                        {% for category, message in messages %}
+                          <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
+
+                    <div class="inputbox">
+                        <input type="email" name="email-address" required>
+                        <label for="email-address">Email Address</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <input type="password" name="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    
+                    <button type="submit">Login</button> <!-- Login button -->
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
