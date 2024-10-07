@@ -119,7 +119,7 @@ This repository as of now contains the implementation of flask applications for 
 * Step II: Install the required packages
 ```sh
       # On the terminal, move into the ADET-BSCS3B directory or just choose the directory where the repository is cloned
-      $ cd ADET-BSCS3B
+      $ cd ADET-BSCS3B/Avila_HeraldCarl
       $ pip install -r requirements.txt
 ```
 
