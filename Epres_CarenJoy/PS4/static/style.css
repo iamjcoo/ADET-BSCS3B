@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('pink.jpg') no-repeat center center/cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.form-box {
+    width: 700px; 
+    padding: 50px; 
+    background: rgba(141, 101, 107, 0.9); 
+    border-radius: 15px;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    text-align: center;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 26px; 
+    margin-bottom: 15px; 
+}
+
+.inputbox {
+    position: relative;
+    margin-bottom: 25px; 
+    width: 100%;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 15px 20px; 
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 7px; 
+    font-size: 20px; 
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.inputbox input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-color: #5c8191;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 20px; 
+    top: 10px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: 0.3s ease;
+    margin-bottom: 5px; 
+}
+
+.inputbox input:focus + label,
+.inputbox input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 14px; 
+    color: #75d5ff;
+}
+
+button {
+    width: 100%;
+    padding: 12px 0; 
+    background-color: #ff69b4; 
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 18px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493; 
+}
+
+.dashboard-box {
+    width: 700px; 
+    padding: 50px;
+    background: rgba(141, 101, 107, 0.9); 
+    border-radius: 15px; 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    text-align: center; 
+    margin: 50px auto; 
+}
+
+.greeting {
+    color: #ffffff; 
+    font-size: 32px;
+    margin-bottom: 30px; 
+}
+
+.logout-button {
+    padding: 12px 20px; 
+    background-color: #ff69b4;
+    border-radius: 5px; 
+    color: #ffffff;
+    font-size: 18px; 
+    text-decoration: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.logout-button:hover {
+    background-color: #ff1493; 
+}
+
+.greeting {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.flash-message {
+    color: #ffffff; 
+    font-size: 24px; 
+    text-align: center;
+    margin-bottom: 20px;
+
+}

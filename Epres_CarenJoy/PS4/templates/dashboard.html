@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <section>
+        <div class="dashboard-box">
+            <h1 class="greeting">Hello, {{ user['first_name'] }} {{ user['middle_name'] }} {{ user['last_name'] }}</h1> 
+            <h1 class="greeting">{{ user['contact_number'] }}</h1>
+            <h1 class="greeting">{{ user['email'] }}</h1>
+            <h1 class="greeting">{{ user['address'] }}</h1>
+            <a href="/logout" class="logout-button">Logout</a> 
+        </div>
+    </section>
+</body>
+</html>
