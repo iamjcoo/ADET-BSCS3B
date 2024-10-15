@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5a5a5a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #ffffff;
+        }
+        .container {
+            text-align: center;
+            background: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #3943ff;
+        }
+        a {
+            text-decoration: none;
+            color: #3943ff;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful!</h1>
+        <p>Thank you for registering. Your information has been saved successfully.</p>
+        <a href="{{ url_for('registration_form') }}">Go back to Registration Form</a>
+    </div>
+</body>
+</html>
