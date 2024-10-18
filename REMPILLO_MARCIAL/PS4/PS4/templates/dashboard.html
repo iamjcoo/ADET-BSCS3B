@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #28a745; 
+            color: white;
+        }
+        a {
+            display: block;
+            text-align: right;
+            margin-top: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, {{ user_details[0] }}!</h1>  
+        <table>
+            <tr>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Birthdate</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td>{{ user_details[1] }}</td>
+                <td>{{ user_details[2] }}</td>
+                <td>{{ user_details[3] }}</td>
+                <td>{{ user_details[4] }}</td>
+                <td>{{ user_details[5] }}</td>
+            </tr>
+        </table>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>

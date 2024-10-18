@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6dd5ed, #2193b0);  /* Beautiful gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;  /* White background for the container */
+            padding: 40px;  /* More padding for spacious feel */
+            border-radius: 15px;  /* More rounded corners for a softer look */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Deeper shadow for more depth */
+            width: 100%;
+            max-width: 450px;  /* Restrict width */
+            margin: 0 20px;  /* Side margins for responsiveness */
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;  /* Dark gray for heading */
+            font-size: 2em;  /* Larger font size for the heading */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;  /* Medium gray for labels */
+            font-size: 0.9em;  /* Slightly smaller size for labels */
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], textarea {
+            width: 100%;
+            padding: 15px;  /* Increased padding for comfort */
+            margin-bottom: 20px;  /* More spacing between elements */
+            border: 1px solid #ccc;  /* Light gray border */
+            border-radius: 10px;  /* Rounded edges for inputs */
+            font-size: 16px;  /* Slightly larger font size for inputs */
+            background-color: #f9f9f9;  /* Light gray background for inputs */
+            transition: border-color 0.3s;  /* Smooth transition for border color */
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="date"]:focus, textarea:focus {
+            border-color: #2193b0;  /* Highlight border color on focus */
+            outline: none;  /* Remove default outline */
+        }
+        textarea {
+            resize: vertical;  /* Allow textarea to be resized vertically */
+            height: 100px;  /* Set a default height for the textarea */
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;  /* Soft green for the submit button */
+            color: white;
+            border: none;
+            border-radius: 10px;  /* Rounded edges for the button */
+            cursor: pointer;
+            font-size: 18px;  /* Larger font size for the button */
+            transition: background-color 0.3s, transform 0.3s;  /* Smooth transition for hover effects */
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;  /* Darker green on hover */
+            transform: scale(1.05);  /* Slightly scale up on hover */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;  /* Smaller font size for footer */
+            color: #666;  /* Light gray for footer text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="/" method="POST"> <!-- Corrected action to point to Flask route -->
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="middle_name">Middle Name</label>
+            <input type="text" id="middle_name" name="middle_name" required>
+
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="birthdate">Birthdate</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <input type="submit" value="Register">
+        </form>
+        <div class="footer">
+            <p>© 2024 Your Company Name. All rights reserved.</p> <!-- Footer for branding -->
+        </div>
+    </div>
+</body>
+</html>

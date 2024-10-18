@@ -1,0 +1,18 @@
+[
+    {
+        "first_name": "Jane",
+        "middle_name": "Bobis",
+        "last_name": "Cagorong",
+        "birthdate": "2004-04-12",
+        "email": "jacagorong@my.cspc.edu.ph",
+        "address": "Balangibang Polangui, Albay"
+    },
+    {
+        "first_name": "Marcial",
+        "middle_name": "Racho",
+        "last_name": "Rempillo",
+        "birthdate": "2004-09-09",
+        "email": "marempillo@my.cspc.edu.ph",
+        "address": "San Miguel Nabua, Camarines Sur"
+    }
+]
