@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>User Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url(../static/1.jpeg) center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #001f3f; 
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e0f7fa; 
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); 
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            background: #0074d9; 
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            background-color: #ffffff; 
+            color: #333; 
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #0074d9; 
+            color: white;
+        }
+
+        tbody tr:hover {
+            background-color: #f0faff; 
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff677d, #ffafcc); 
+            border: none;
+        }
+
+        .btn-danger:hover {
+            background: linear-gradient(135deg, #ffafcc, #ff677d); 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Hello, {{ user.first_name }}</h1>
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Contact Number</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.middle_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.contact_number }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.address }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center mt-4">
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
