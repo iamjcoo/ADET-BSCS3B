@@ -1,0 +1,9 @@
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e60aaf, #2ec409);
+    color: white;
+    text-align: center;
+}
