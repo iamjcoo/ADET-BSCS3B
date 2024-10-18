@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='img/background.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            margin: 0;
+        }
+        .container {
+            background: rgba(179, 209, 210, 0.61);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(179, 209, 210, 0.3);
+            padding: 20px;
+            text-align: center;
+            width: 400px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome!</h2>
+        <p>Would you like to log in or sign up?</p>
+        <a href="{{ url_for('login') }}" class="btn btn-primary">Log In</a>
+        <a href="{{ url_for('register') }}" class="btn btn-secondary">Sign Up</a>
+    </div>
+</body>
+</html>

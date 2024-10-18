@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='img/background.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            margin: 0;
+        }
+        .container {
+            background: rgba(179, 209, 210, 0.61);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(179, 209, 210, 0.3);
+            width: 400px
+        }
+    </style>
+<div class="container">
+    <h2>Hello, {{ user_details.first_name }}</h2>
+    <table class="table">
+        <tr><th>First Name</th><td>{{ user_details.first_name }}</td></tr>
+        <tr><th>Middle Name</th><td>{{ user_details.middle_name }}</td></tr>
+        <tr><th>Last Name</th><td>{{ user_details.last_name }}</td></tr>
+        <tr><th>Contact Number</th><td>{{ user_details.contact_number }}</td></tr>
+        <tr><th>Email Address</th><td>{{ user_details.email_address }}</td></tr>
+        <tr><th>Address</th><td>{{ user_details.address }}</td></tr>
+    </table>
+    <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+</div>
+</body>
+</html>
