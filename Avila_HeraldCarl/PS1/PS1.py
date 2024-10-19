@@ -9,7 +9,7 @@ def index():
 @app.route('/greet', methods=['POST'])
 def greet():
     name = request.form['name']
-    return f'<h1>Hello, {name}!</h1>'
+    return f'<h1>Hello World!</h> <h1>{name}, welcome to CCCS 106 - Applications Development and Emerging Technologies</h1>'
 
 if __name__ == '__main__':
     app.run(debug=True)

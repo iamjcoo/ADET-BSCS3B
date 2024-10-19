@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/dashboard.css">
+</head>
+<body>
+<div class="container">
+    <h2>Hello, {{ user_details.first_name }}!</h2>
+    <table class="table">
+        <tr><th>First Name</th><td>{{ user_details.first_name }}</td></tr>
+        <tr><th>Middle Name</th><td>{{ user_details.middle_name }}</td></tr>
+        <tr><th>Last Name</th><td>{{ user_details.last_name }}</td></tr>
+        <tr><th>Contact Number</th><td>{{ user_details.contact_number }}</td></tr>
+        <tr><th>Email Address</th><td>{{ user_details.email_address }}</td></tr>
+        <tr><th>Address</th><td>{{ user_details.address }}</td></tr>
+    </table>
+
+    <div class="logout-btn">
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+
+</div>
+</body>
+</html>

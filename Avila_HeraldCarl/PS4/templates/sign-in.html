@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User sign in</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="static/css/sign-in.css">
+</head>
+<body>
+  
+  <div class="login-container">
+    <form action="/signIn" method="POST">
+      <div class="login-field">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+      </div>
+      <div class="login-field">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <button class="signin-button" type="submit">Sign in</button required>
+      <button class="signup-button" type="button" onclick="signUp()">Sign up</button required>
+    </form>
+    {% if message %}
+    <p style="color: red;">{{ message }}</p>
+    {% endif %}
+  </div>
+
+  <script>
+    function signUp() {
+        // Implement read bookings logic
+        window.location.href = "/signUp";
+    }
+  </script>
+
+</body>
+</html>
